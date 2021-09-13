@@ -1,0 +1,322 @@
+\documentclass[a4paper, 11pt, hidelinks]{article}
+\usepackage{bookmark}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{eucal}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{cancel}
+
+
+
+\geometry{hmargin=2cm,vmargin=1.5cm}
+\newcommand{\prp}{\large \textbf{Proposition :} \large}
+
+\newcommand{\tm}{\large \textbf{Théoreme :} \large}
+
+\newcommand{\ex}{\textcolor{green}{Exemple :} }
+
+\newcommand{\dm}{\textcolor{red}{\textbf{Démo :} } }
+
+\newcommand{\de}{\large \textbf{Définition} \large }
+
+\newcommand{\rmq}{\textbf{Remarque :} }
+
+\newcommand{\bs}{\bigskip}
+
+\newcommand{\voca}{\textcolor{blue}{\textbf{Vocabulaire} } }
+
+\newcommand{\trinom}[3]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3
+\end{pmatrix}}
+
+\newcommand{\quadrinom}[4]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3 \\
+    #4 \\
+\end{pmatrix}}
+
+\newcommand{\pentanom}[5]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3 \\
+    #4 \\
+    #5
+\end{pmatrix}}
+
+\newcommand{\hexanom}[6]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3 \\
+    #4 \\
+    #5 \\
+    #6 
+\end{pmatrix}}
+
+\newcommand{\serie}[2]{\displaystyle\sum_{#1 =0}^{+\infty} #2_{#1} }
+
+\newcommand{\tend}{\underset{n \to + \infty}{\longrightarrow} }
+
+\newcommand{\Lra}{\Leftrightarrow}
+
+\newcommand{\lra}{\leftrightarrow}
+
+\newcommand{\Ra}{\Rightarrow}
+
+\newcommand{\ra}{\rightarrow}
+
+\newcommand{\la}{\leftarrow}
+
+\newcommand{\La}{\Leftarrow}
+
+\newcommand{\dsum}[2]{\displaystyle\sum_{#1}^{#2} }
+
+\newcommand{\dint}[2]{\displaystyle\int_{#1}^{#2} }
+
+\newcommand{\ntend}{\underset{n \to + \infty}{\not \longrightarrow} }
+
+\newenvironment{lmatrix}{$ \left|\begin{array}{l} }{\end{array}\right.$}
+
+\begin{document}
+
+
+
+
+\title{Langages}
+\author{Schobert Néo}
+
+\maketitle
+
+\tableofcontents
+
+
+\newpage 
+
+\large Dates DS : \large
+
+$20$ octobre
+
+$15$ décembre
+
+$9$ février
+
+$23$ mars
+
+$30$ mars
+
+
+
+\section{Origine de l'informatique et but}
+But de l'informatique ?
+
+
+Créée en 1936 (Article d'Alan Turing)
+
+
+Turing cherche à répondre aux question naïve :
+
+\begin{itemize}
+\item Peut-on automatiser des démonstrations automatiques.
+\item Une démonstrations est-elle équivalente à un algorithme.
+\item Qu'est-ce qu'un calcul.
+\end{itemize}
+
+En cherchant à répondre, Turing conçoit des outils (machine de Turing) qui est devenu l'ordinateur.
+
+
+La machine de Turing est une machine abstraite de mémoire infini.
+
+
+La réponse : non, tout n'est pas résoluble par algorithme.
+
+
+Informatique : science de l'information / pas de lien avec l'ordinateur en soi.
+
+
+\bs
+
+En pratique, en informatique, on cherche à résoudre à l'aide d'algorithmes, des problèmes.
+
+Mais qu'est-ce qu'un problème ?
+
+\voca Ils sont de plusieurs types:
+
+\begin{itemize}
+    \item d'évaluation
+    \item d'optimisation
+    \item d'approximation
+    \item d'énumération
+    \item de comptage
+    \item de décision
+\end{itemize}
+
+
+Généralement, les problèmes d'informatique sont de type décision:
+
+Une entrée (propriétés initiales)
+
+Question (où on peut répondre par oui ou par non)
+
+\bs 
+
+Problème : La représentation des objets. En information, on utilise les flottants.
+\bs
+
+\voca L'instance est un codage d'objet abstrait.
+
+\bs
+\voca Un codage est une succession de symbole qui forme ce qu'on appelle un mot.
+
+\bs
+\voca L'ensemble des symboles forme un alphabet.
+
+\bs
+\voca L'ensemble des mots forme un langage formel.
+
+\bs
+Un modèle de calcul est une notion importante: il donne la manière de calculer informatiquement parlant.
+\bs
+
+\voca C'est un objet mathématique formé d'ensembles, de fonctions, de relations, qui abstrait
+les propriétés en définissant une notion d'opération atomique.
+
+
+\section{Alphabet et mot}
+
+
+\de Un alphabet $\Sigma$ est un ensemble fini non vide de symboles $a_i$,
+$i=1,...,k$ appelés lettres ou caractères.
+
+$\Sigma= \{a_1,a_2,...,a_k\}$
+
+\bs
+
+\ex $\Sigma=\{a,b,...,z,let,rec,for,=,+,*,...\}$
+
+\bs
+
+\de Un mot $m$ est une suite finie de symboles sur un alphabet $\Sigma$.
+
+Un mot n'est rien d'autre qu'un $n-uplet$.
+
+\bs
+
+\ex La suite $(a_{i1},a_{i2},...,a_{in}) \in \Sigma^n$ est un mot.
+
+On omet les parenthèses traditionnellement : $m=a_{i1} a_{i2}... a_{in}$
+
+\bs 
+
+La longueur d'un mot $m$ est alors $|m|= n$
+
+Le mot vide noté $\epsilon$ est l'unique mot de longueur $0$
+
+$|mm'|=|m|+|m'|$.
+
+
+L'ensemble des mots de longueur $n$ sur $\Sigma$ est noté $\Sigma^n$
+
+L'ensemble de tous les mots sur $\Sigma$ est noté $\Sigma^+$ avec :
+
+$\Sigma^+= \displaystyle\bigcup_{i=1}^{+\infty} \Sigma^i$
+
+\bs
+
+\de Soit $\Sigma$ un alphabet. La concaténation est une loi de composition interne, 
+
+notée $.$, sur $\Sigma^*$.
+
+Si $m=a_{i1} a_{i2}... a_{in}$ et $m'=a'_{i1} a'_{i2}... a'_{in}$ sont des mots construits sur 
+$\Sigma$, la concaténation $m\dot m'$ (ou $mm'$) de $m$ et $m'$ est définie par :
+
+$m\dot m' =a_{i1} a_{i2}... a_{in} a'_{i1} a'_{i2}... a'_{in}$
+
+$\Sigma$ muni de cette loi forme un monoïde.
+
+\bs
+\de (préfixe)
+
+\bs
+\de (suffixe)
+
+\bs
+\de (facteur)
+
+\section{Langages formel}
+
+\de Un langage sur un alphabet $\Sigma$ (ou langage de $\Sigma^*$) est un ensemble de mots de $\Sigma^*$
+
+Un langage est un sous-ensemble de $\Sigma^*$.
+
+\bs
+\de (union de langages)
+
+\bs
+\de (intersection de langages)
+
+\bs
+\de (concaténation de langages)
+
+\bs
+\de La fermeture étoilée (ou itération) du langage $L$, noté $L^*$ est le langage :
+
+$L^*=\displaystyle\bigcup_{k \in \mathbb{N}^*} L^k$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
