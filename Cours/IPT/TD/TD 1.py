@@ -358,20 +358,20 @@ def genere_chemin_naif(n):
     else:
         return atteints
 
-print(genere_chemin_naif(10))
+# print(genere_chemin_naif(10))
 
 
 
 #Exercice 11:
 #1
+#
 
 
 
 
 
 
-
-
+#2
 
 
 
@@ -379,17 +379,48 @@ print(genere_chemin_naif(10))
 
 #Exercice 12:
 
+#1
+
+#Ce script utilise la méthode de monte carlo pour calculer la valeur de pi ici. On sélectionne d'abord une valeur pour l'erreur
+# Elle ne doit pas être trop petite afin d'éviter les erreurs liés à la représentation des floats.
+# Après initialisation de quelques valeurs, on pose une boucle conditionelle dans laquelle on tente d'approcher pi avec une erreur maximale e 
+# que l'on a entré. Dans cette boucle, on prend deux nombres au hasard; si ils sont dans le cercle de rayon 0.5, alors on a +1 pour l'intérieur.
+# Sinon, c'est +1 pour l'extérieur.
+# Cela est pris en compte par resexp, qui se rapprochera de pi petit à petit.
+# Ce script fini par retourner une valeur approchée de pi avec l'approximation telle que l'on a voulu en entrant l'erreur.
 
 
+#2
+
+#−*− coding: utf−8 −*−
+#""" MonteCarlo version 1"""
+from random import *
+import numpy as np
+
+def monte_carlo():
+    pi=np.pi
+    erreur =0
+    while not (erreur>=1e-9):
+        erreur=float(input(u"Entrer la précision desirée pour ce calcul ( e>1E−9): "))
+    Nint=0
+    N=0
+    resexp=0
+    while abs(pi-resexp) > erreur:
+        x=random ()
+        y=random ()
+        z=random ()
+        if np.sqrt((x-0.5)**2+(y-0.5)**2+(z-0.5)**2)<=0.5:
+            Nint=Nint +1
+            N=N+1
+            resexp=(3*Nint)/(4*N*(0.5)**3)
+        else:
+            N=N+1
+            resexp=(3*Nint)/(4*N*(0.5)**3)
+        print(resexp)
+    print(u"La valeur approchée recherchée est : " ) , resexp
 
 
-
-
-
-
-
-
-
+#monte_carlo()
 
 
 
@@ -408,33 +439,125 @@ def bon_formatage(A):
 
 A="1460245207352"
 
-print(bon_formatage(A))
-
-
-
-
-
-
-
-
-
-
-
+# print(bon_formatage(A))
 
 
 
 #Exercice 14:
+#1
+A="1234567890128"
+
+def cle(A):
+    s_pair=int(A[11])
+    s_impaire=int(A[12])
+    for k in range(1,6):
+        s_pair+=int(A[2*k-1])
+        s_impaire+=int(A[2*k])
+    i=0
+    while (((3*s_pair)+s_impaire)-i)%10!=0:
+        i+=1
+    cle=-i+10
+    return cle
+
+# print(cle(A))
 
 
+#2
 
+def verif_cle(A):
+    s_pair=int(A[11])
+    s_impaire=int(A[12])
+    for k in range(1,6):
+        s_pair+=int(A[2*k-1])
+        s_impaire+=int(A[2*k])
+    i=0
+    while (((3*s_pair)+s_impaire)-i)%10!=0:
+        i+=1
+    cle=-i+10
+    return cle==int(A[0])
 
-
-
-
-
-
-
+# print(verif_cle(A))
 
 
 
 #Exercice 15:
+
+#1
+def chaine_entier(ch):
+    s=0
+    n=len(ch)
+    for k in range(n):
+        s+= ord(ch[k])*(256**(n-k-1))
+    return s
+
+
+# print(chaine_entier("pouet"))
+
+
+
+#2
+
+def chaine_entier_Horner(ch):
+    x=256
+    s=ord(ch[0])
+    n=len(ch)
+    for k in range(1,n):
+        s=s*x + ord(ch[k])
+    return s
+
+
+# print(chaine_entier_Horner("pouet"))
+
+
+#3
+
+def entier_chaine(n):
+    ch=""
+    while n >1:
+        ai=n%256
+        ch=str(chr(int(ai)))+ch
+        n=(n-ai)/256
+    return ch
+
+
+# print(entier_chaine(482906301812))
+
+
+#4
+#a
+def h(ch):
+    x=256
+    s=ord(ch[0])
+    n=len(ch)
+    for k in range(1,n):
+        s=s*x + ord(ch[k])
+    return s%255
+
+
+print(h("pouet"))
+print(h("chariot"))
+print(h("haricot"))
+
+
+#b
+#Ces deux derniers cas forment ce qu'on appelle une collision. Ils ont un même haché pour une chaine de caractère différente.
+
+
+#5
+#Les mots chariot et haricot sont des anagrames. Comme 256**k=1[255], peu importe l'ordre dans lequel sont agencées les lettres. 
+
+#6
+def dico_valide(dict):
+    L=[]
+    condition=True
+    for k in dict:
+        if h(k) in L:
+            condition=False
+        L.append(h(k))
+    return condition
+
+dict={"Tintin": 25,"Haddock":55,"pouet":"trompette","chariot":234}
+
+
+
+# print(dico_valide(dict))
