@@ -429,17 +429,14 @@ def monte_carlo():
 
 def bon_formatage(A):
     if A[0]=="1" or A[0]=="2":
-        i=0
-        while (int(A)-i)%97!=0:
-            i+=1
-        K=-i+97
+        K=97- int(A)%97
     else:
         return "Mauvais formatage"
     return K
 
 A="1460245207352"
 
-# print(bon_formatage(A))
+print(bon_formatage(A))
 
 
 

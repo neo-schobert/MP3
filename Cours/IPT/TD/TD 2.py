@@ -45,7 +45,7 @@ from math import *
 # Exercice 2
 
 # 1)
-# \displaystyle\sum_{k=1}^{2n} \frac{(-1)^{k-1}}{k}= \displaystyle\sum_{k=1}^n -\frac{1}{2k} \displaystyle\sum_{k=1}^n \frac{1}{2k-1}
+# \displaystyle\sum_{k=1}^{2n} \frac{(-1)^{k-1}}{k}= \displaystyle\sum_{k=1}^n -\frac{1}{2k} + \displaystyle\sum_{k=1}^n \frac{1}{2k-1}
 # =\displaystyle\sum_{k=1}^n \frac{1}{(2k-1)2k}= \frac{1}{2} \displaystyle\sum_{k=1}^n \frac{1}{(2k-1)k}
 
 
@@ -208,8 +208,12 @@ def max(L,deb):
 
 
 # c)
+# Initialisation :
 
+# P_1: A la 1 ere itération, CLF. 
+# Par hérédité, si L_j[0]>= L_j[1]>=...>=L_j[j-1] et \forall i>=j, L_j[i]<=L_j[j-1]
 
+# Au rang j+1, CLF encore...
 
 
 
