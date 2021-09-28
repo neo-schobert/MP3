@@ -284,10 +284,9 @@ def dicho(e,T):
 
 # 2)
 def calcul_n(h):
-    return int((h+2)/2 * random.random())+1
+    if h>1:
+        return int((h+2)/2 * random.random())+1
 
-
-print(calcul_n(2))
 
 # 3)
 def initialisation(P):
@@ -296,19 +295,77 @@ def initialisation(P):
 
 # 4)
 def actualise(piles,perdus):
-    n=len(piles)
-    piles_actualisee=copy.deepcopy(piles + [0])
-    for k in range(n):
-        piles_actualisee[k+1]=calcul_n(piles[k])
-    piles_actualisee[0]=piles_actualisee[0]-piles_actualisee[1]
-    perdus = piles_actualisee[n]
-    return piles_actualisee[:n] ,perdus
+    N=len(piles)-1
+    for i in range(1,N):
+        n=calcul_n(piles[i-1]-piles[i])
+        piles[i-1]-=n
+        if i==N-1:
+            perdus+=N
+        return piles,perdus
+
 
 
 # 5)
+def bloc_execution(piles,perdus):
+    while perdus<=1000:
+        for k in range(10):
+            perdus=actualise(piles,perdus)[1]
+        piles[0]+=1
+    return piles
 
 
+
+# 6)
 
 
 
 # Exercice 12
+
+# 1)
+# Renvoie une liste de liste de taille n*n. (Ne pas confondre avec tableau numpy)
+
+
+# 2)
+def init(n):
+    G=[[0]*n]*n
+    i=random.randrange(n)
+    j=random.randrange(n)
+    G[i][j]=1
+    return G
+
+# 3)
+def compte(G):
+    L=[0,0,0,0]
+    for i in G:
+        for j in k:
+            L[j]+=1
+    return L
+
+# 4)
+# Ca renvoie un booléen wesh
+
+
+# 5)
+# return (G[0][j+1]-1)*(G[0][j-1]-1)*)*(G[1][j]-1)==0
+
+
+# return (G[i][j+1]-1)*(G[i][j-1]-1)*(G[i+1][j]-1)*(G[i-1][j]-1)==0
+
+
+# 6)
+def suivant(G,p1,p2):
+    
+
+
+
+# 7)
+
+
+
+
+# 8)
+
+
+
+
+# 9)
