@@ -1,7 +1,8 @@
 import time as t
 import numpy as np
 from math import *
-
+import random
+import copy
 
 # Exercice 1
 # 1)
@@ -275,6 +276,36 @@ def dicho(e,T):
 
 
 # Exercice 11
+# 1)
+
+# 0<=random.random()<1
+# 0<= (h+2)/2 * random.random()<(h+2)/2
+# 1<=n< int((h+2))/2 +1<=(h+2)/2 +1
+
+# 2)
+def calcul_n(h):
+    return int((h+2)/2 * random.random())+1
+
+
+print(calcul_n(2))
+
+# 3)
+def initialisation(P):
+    piles=[0 for k in range(P+1)]
+    return piles
+
+# 4)
+def actualise(piles,perdus):
+    n=len(piles)
+    piles_actualisee=copy.deepcopy(piles + [0])
+    for k in range(n):
+        piles_actualisee[k+1]=calcul_n(piles[k])
+    piles_actualisee[0]=piles_actualisee[0]-piles_actualisee[1]
+    perdus = piles_actualisee[n]
+    return piles_actualisee[:n] ,perdus
+
+
+# 5)
 
 
 
