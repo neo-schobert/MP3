@@ -1,0 +1,421 @@
+\documentclass[a4paper, 11pt, hidelinks]{article}
+\usepackage{bookmark}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{eucal}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{mathrsfs}  
+\usepackage{esvect}
+\usepackage[standard]{ntheorem}
+\usepackage{romanbar}
+\usepackage{titlesec}
+
+
+
+\geometry{hmargin=2cm,vmargin=1.5cm}
+
+\tikzset{
+  treenode/.style = {shape=rectangle, rounded corners,
+                     draw, align=center,
+                     top color=white, bottom color=blue!5},
+  root/.style     = {treenode, font=\Large, bottom color=red!10},
+  env/.style      = {treenode, font=\ttfamily\normalsize},
+  dummy/.style    = {circle,draw}
+}
+
+\newcommand{\prp}{\large \textbf{Proposition :} \large}
+
+\newcommand{\tm}{\large \textbf{Théoreme :} \large}
+
+\newcommand{\ex}{\textcolor{green}{Exemple :} }
+
+\newcommand{\dm}{\textcolor{red}{\textbf{Démo :} } }
+
+\newcommand{\de}{\large \textbf{Définition} \large }
+
+\newcommand{\rmq}{\textbf{Remarque :} }
+
+\newcommand{\bs}{\bigskip}
+
+\newcommand{\voca}{\textcolor{blue}{\textbf{Vocabulaire} } }
+
+\newcommand{\lem}{\textcolor{red}{\textbf{Lemme :} } }
+
+\newcommand{\rb}[1]{\Romanbar{#1}}
+
+
+\newcommand{\trinom}[3]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3
+\end{pmatrix}}
+
+\newcommand{\quadrinom}[4]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3 \\
+    #4 \\
+\end{pmatrix}}
+
+\newcommand{\pentanom}[5]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3 \\
+    #4 \\
+    #5
+\end{pmatrix}}
+
+\newcommand{\hexanom}[6]{\begin{pmatrix}
+    #1 \\
+    #2 \\
+    #3 \\
+    #4 \\
+    #5 \\
+    #6 
+\end{pmatrix}}
+
+\newcommand{\serie}[2]{\displaystyle\sum_{#1 =0}^{+\infty} #2_{#1} }
+
+\newcommand{\tend}{\underset{n \to + \infty}{\longrightarrow} }
+
+\newcommand{\Lra}{\Leftrightarrow}
+
+\newcommand{\lra}{\leftrightarrow}
+
+\newcommand{\Ra}{\Rightarrow}
+
+\newcommand{\ra}{\rightarrow}
+
+\newcommand{\la}{\leftarrow}
+
+\newcommand{\La}{\Leftarrow}
+
+\newcommand{\dsum}[2]{\displaystyle\sum_{#1}^{#2} }
+
+\newcommand{\dint}[2]{\displaystyle\int_{#1}^{#2} }
+
+\newcommand{\ntend}{\underset{n \to + \infty}{\not \longrightarrow} }
+
+\newenvironment{lmatrix}{$ \left|\begin{array}{l} }{\end{array}\right.$}
+
+\newcommand{\img}[4]{\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=#1 ]{#2}
+    \caption{#3}
+    \label{#4}
+    \end{figure} }    
+\begin{document}
+
+\newcommand{\grad}[1]{\vv{grad}#1}
+
+
+\title{Livret de citations}
+\author{Schobert Néo}
+
+\maketitle
+
+\tableofcontents
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{La mémoire : le constat douloureux de l’écoulement du temps}
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} le mystère a été chassé \fg{} (\rb{1}, $16$)
+    \item \og{} Les odeurs s’en sont allées. \fg{} (\rb{10}, $285$) 
+    \item \og{} Les odeurs ont été vaincues. \fg{} (\rb{10}, $286$)
+    \item \og{} Même le baobab a perdu de sa taille avec le temps ; et pourtant j’avais cru que ce rempart serait éternel, échapperait aux perspectives élargies d’une enfance disparue.. \fg{} (\rb{5}, $127$)
+    \item \og{} Les visages familiers apparaissent différents, agissaient autrement. Des détails surgissaient là où il n’existait pas avant, disparaissaient là où, auparavant, ils étaient inséparables de notre existence. Tous les êtres humains avec lesquels nous entrions en contact, Tinu et moi, CHANGEAIENT  \fg{} (\rb{7}, $183$)
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\section{La famille}
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} un besoin d’être avec la famille, de partager l’intimité tranquille du toucher, des regards, dans un rapprochement palpable en chacun de nos actes. \fg{} (\rb{11}, $308$)
+    \item Le village d’Isara : \og{} un amour, une protection d’une autre sorte, plus solide, plus vieille que la terre. \fg{} (\rb{5}, $134-135$)
+    \item Le père : \og{} Quant à mon père, évidemment, je le tenais pratiquement pour invulnérable. \fg{} (\rb{1}, $35$)
+    \item La fratrie : \og{} le monde ligué des enfants \fg{} (\rb{8}, $239$)
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\section{Le monde imaginaire des récits}
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} c’était à l’École du Dimanche que l’on racontait les vraies histoires, les histoires qui vivaient dans les événements eux-mêmes, franchissaient les limites des dimanches et des pages de la Bible pour entrer dans l’univers des pays, des femmes et des hommes fabuleux. \fg{} (\rb{1}, $14$)
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\section{La foi}
+
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} Dieu avait l’habitude soit de ne pas répondre du tout aux prières qu’on lui faisait, soit de ne pas y répondre franchement. \fg{} (\rb{4}, $117$)
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\section{Les adultes vus par l’enfant}
+
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} Ils parlaient de moi comme si je n’avais pas été là. C’était une de leurs étranges habitudes, mais j’avais également remarqué que c’était là le propre de la plupart des grandes personnes ; ils parlaient de leurs enfants devant eux comme s’ils n’avaient pas été là. \fg{} (\rb{4}, $109$)
+    \item \og{} Non, ils n’avaient pas compris ; j’étais sûr, comme à l’ordinaire, d’avoir trouvé la faille dans leur raisonnement. \fg{} (\rb{4}, $109$)
+    \item \og{} Il n’y avait ni justice ni logique dans le monde des adultes. \fg{} (\rb{7}, $204$)
+    \item \og{} Voilà ce qui se passe quand les grandes personnes ne veulent pas comprendre \fg{} (\rb{1}, $43$) (Bukola à propos du refus de son père de donner un Sàarà, ce qui a entrainé une crise)
+    
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+\section{Les corrections}
+
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} Le catalogue d’èmi èsù était très vaste et comprenait jusqu’au moindre signe de mauvaise volonté face à un ordre des parents. \fg{} (\rb{6}, $159$)
+    \item \og{} Chrétienne Sauvage […] tirait toute son autorité de ce passage de la Bible qui disait : \og{} Qui aime bien… \fg{} \fg{} (\rb{12}, $336$)
+    \item \og{} Et elle jubilait visiblement comme si le moment tant attendu était enfin venu. Sa complaisance m’irritait ; elle me semblait disproportionnée au crime. \fg{} (\rb{6}, $178$) 
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+
+\section{Éduquer les enfants}
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item L’expérience comme une leçon de choses : \og{} je t’emmène à l’école, et il me tendit une machette en disant : Voici ton crayon. Ton cahier t’attend là-bas, au bout d’une heure de marche \fg{} (\rb{9}, $254$)
+    \item La leçon de Daodu (pourtant directeur de lycée) : \og{} Ne te contente pas de fourrer le nez dans ce livre mort que tu es en train de lire. \fg{} (\rb{15}, $427$)
+    \item Beere Kuti quand elle s’en prend au District Officer blanc qui s’est adressé irrespectueusement aux femmes : \og{} Sans doute êtes-vous né, mais vous n’avez pas été élevé. \fg{} (\rb{14}, $399$).
+    
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+
+\section{Les leçons des adultes}
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item Daodu : \og{} le Blanc est une créature étrange \fg{} (\rb{15}, $426$)
+    \item Le grand-père paternel de Wole : 
+        \begin{itemize}
+            \item - \og{} Ayo ne croit pas qu’il faille laisser les enfants mûrir dans leur corps avant de forcer leur esprit. \fg{} (\rb{9}, $272$)
+            \item - \og{} Les humains sont ce qu’ils sont. Certains sont bons, d’autres sont méchants. Et il y en a qui deviennent méchants simplement parce qu’ils sont poussés à bout. L’envie. Hm, il ne faut pas que tu commettes l’erreur de croire que l’envie n’est pas un mobile puissant chez beaucoup. C’est une maladie que tu trouveras partout, oui, partout. \fg{} (\rb{9}, $275$)
+        \end{itemize}    
+    \item Essay : 
+        \begin{itemize}
+            \item - \og{} Les choses ne se passent pas toujours comme nous l’avons prévu. Il y a beaucoup de déceptions dans la vie. Il y a toujours de l’inattendu. On prévoit minutieusement, on préparer les différentes étapes et puis… enfin, c’est la vie. Nous ne sommes pas Dieu. Alors tu vois, tu ne dois pas te laisser accabler par l’inattendu. Tu découvriras que seule la détermination renverse les obstacles, la pure détermination. Et la foi en Dieu ; ne néglige pas très prières. \fg{} (\rb{11}, $310$)
+            \item - \og{} Le monde est plus vaste que le monde des chrétiens, ou que le monde des livres. \fg{} (\rb{9}, $276$)
+        \end{itemize}
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\section{Grandir}
+
+
+
+\subsection{Rousseau}
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+\subsection{Soyinka}
+
+
+\begin{enumerate}
+    \item \og{} Le L. A. était à juste titre considéré comme une école d’aguerrissement, comme un terrain d’entraînement pour apprendre à survivre. \fg{} (\rb{12}, $316$)
+    \item Dernière phrase du texte : \og{} Le moment était venu d’entreprendre les mutations mentales nécessaires pour accéder à un nouvel univers d’adultes irrationnels et à leur discipline. \fg{} (\rb{15}, $432$)
+\end{enumerate}
+
+
+\subsection{Andersen}
+
+
+\begin{enumerate}
+    \item 
+\end{enumerate}
+
+
+
+
+
+\end{document}
